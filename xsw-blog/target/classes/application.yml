@@ -1,0 +1,11 @@
+
+
+#dubbo
+
+dubbo:
+  scan:
+    base-packages: com.xsw.blog.rpc
+  application:
+    name: xsw-blog
+  cloud:
+    subscribed-services: ""

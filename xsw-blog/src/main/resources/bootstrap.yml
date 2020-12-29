@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: xsw-blog
+  cloud:
+    nacos:
+      config:
+        server-addr: ${NACOS_ADDRESS}
+        namespace: ${NACOS_NAMESPACE}
+        file-extension: yml
+        shared-configs[0]:
+          data-id: common.yml
+          refresh: true
+        shared-configs[1]:
+          data-id: xsw-blog.yml
+          refresh: true
