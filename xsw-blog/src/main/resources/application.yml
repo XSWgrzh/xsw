@@ -15,12 +15,17 @@ spring:
   application:
     name: xsw-blog
   cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8080
     seata:
       tx-service-group: tx_group
 #seata:
 seata:
   enable-auto-data-source-proxy: false
   tx-service-group: tx_group
+
+# sentinel dashboard
 
 mybatis-plus:
   mapper-locations: com.xsw.blog.mapper
