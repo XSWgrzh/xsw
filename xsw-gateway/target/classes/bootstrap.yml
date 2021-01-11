@@ -10,25 +10,9 @@ spring:
         shared-configs[0]:
           data-id: common.yml
           refresh: true
-        shared-configs[1]:
-          data-id: xsw-gateway.yml
-          refresh: true
-    gateway:
-      discovery:
-        locator:
-          lowerCaseServiceId: true
-          enabled: true
-      routes:
-        - id: xsw-auth          #我们自定义的路由 ID，保持唯一
-          uri: lb://xsw-auth
-          predicates:
-            - Path=/auth/**
-          filters:
-            - StripPrefix=1
-        - id: xsw-blog
-          uri: lb://xsw-blog
-          predicates:
-            - Path=/blog/**
-          filters:
-            - StripPrefix=1
+        #shared-configs[1]:
+        #  data-id: xsw-gateway.yml
+        #  refresh: true
+
+
 

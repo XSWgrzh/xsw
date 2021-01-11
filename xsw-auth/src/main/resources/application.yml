@@ -1,0 +1,11 @@
+server:
+  port: 40002
+
+#dubbo
+dubbo:
+  scan:
+    base-packages: com.xsw.auth.rpc
+  application:
+    name: xsw-auth
+  cloud:
+    subscribed-services: ""

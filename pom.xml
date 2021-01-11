@@ -25,7 +25,7 @@
         <spring-cloud.version>Hoxton.SR3</spring-cloud.version>
         <spring-cloud-alibaba.version>2.2.0.RELEASE</spring-cloud-alibaba.version>
         <spring-boot.version>2.2.5.RELEASE</spring-boot.version>
-
+        <spring-cloud-sentinel>0.2.1.RELEASE</spring-cloud-sentinel>
         <commons-lang3.version>3.5</commons-lang3.version>
         <httpclient.version>4.5.6</httpclient.version>
         <lombok.version>1.16.18</lombok.version>
@@ -69,6 +69,12 @@
                 <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+                <version>${spring-cloud-sentinel}</version>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->

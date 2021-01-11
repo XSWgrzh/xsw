@@ -1,5 +1,6 @@
 package com.xsw.core.entity.blog;
 
+
 import com.baomidou.mybatisplus.annotation.*;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
@@ -20,7 +21,7 @@ public class BlogSort implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(type = IdType.ASSIGN_UUID)
+    @TableId(value = "blog_sort_id", type = IdType.ASSIGN_UUID)
     private String blogSortId;
 
     /**
@@ -37,12 +38,12 @@ public class BlogSort implements Serializable {
     /**
      * 点击数
      */
-    private Integer clickCount;
+    private int clickCount;
 
     /**
      * 排序字段，数值越大，越靠前
      */
-    private Integer sort;
+    private int sort;
 
     /**
      * @TableField 配置需要填充的字段
@@ -50,8 +51,7 @@ public class BlogSort implements Serializable {
      */
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @TableField(fill = FieldFill.INSERT_UPDATE)
-    private Date createTime;
+    private Date createTime = new Date();
 
     /**
      * 更新时间
@@ -59,7 +59,16 @@ public class BlogSort implements Serializable {
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @TableField(fill = FieldFill.INSERT_UPDATE)
-    private Date updateTime;
+    private Date updateTime = new Date();
 
+    /**
+     * 状态
+     */
+    private int status;
+
+    /**
+     * 用户id
+     */
+    private String uid;
 
 }

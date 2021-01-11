@@ -10,6 +10,12 @@ spring:
         shared-configs[0]:
           data-id: common.yml
           refresh: true
-        shared-configs[1]:
-          data-id: xsw-blog.yml
-          refresh: true
+        #shared-configs[1]:
+         # data-id: xsw-blog.yml
+         # refresh: true
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/xsw?useUnicode=true&serverTimezone=GMT&characterEncoding=utf8&useSSL=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource

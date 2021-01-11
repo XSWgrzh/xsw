@@ -130,16 +130,16 @@ public class Blog implements Serializable {
      */
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @TableField(fill = FieldFill.INSERT_UPDATE)
-    private Date createTime;
+    @TableField(fill = FieldFill.INSERT)
+    private Date createTime = new Date();
 
     /**
      * 更新时间
      */
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @TableField(fill = FieldFill.INSERT_UPDATE)
-    private Date updateTime;
+    @TableField(fill = FieldFill.UPDATE)
+    private Date updateTime =new Date();
 
 
     // 以下字段不存入数据库，封装为了方便使用

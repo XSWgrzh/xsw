@@ -10,7 +10,7 @@ spring:
         shared-configs[0]:
           data-id: common.yml
           refresh: true
-        shared-configs[1]:
-          data-id: xsw-auth.yml
-          refresh: true
+        #shared-configs[1]:
+        #  data-id: xsw-auth.yml
+        #  refresh: true
 
